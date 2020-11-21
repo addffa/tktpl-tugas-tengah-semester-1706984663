@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Activity Planner</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="plan_detail_suffix">Activities:</string>
+    <string name="notification_title">Activity alarm</string>
+    <string name="notification_text">This is alarm notification</string>
+</resources>
