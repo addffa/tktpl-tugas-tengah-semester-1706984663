@@ -13,8 +13,16 @@ public class Plan implements Serializable {
 
     private String title;
 
-    public Plan(String title) {
+    private String description;
+
+    private long timeMillis;
+
+    public Plan() {
+    }
+
+    public Plan(String title, String description) {
         this.title = title;
+        this.description = description;
     }
 
     public int getPlanId() {
@@ -25,11 +33,27 @@ public class Plan implements Serializable {
         return title;
     }
 
+    public String getDescription() {
+        return description;
+    }
+
+    public long getTimeMillis() {
+        return timeMillis;
+    }
+
     public void setPlanId(int planId) {
         this.planId = planId;
     }
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setTimeMillis(long timeMillis) {
+        this.timeMillis = timeMillis;
     }
 }

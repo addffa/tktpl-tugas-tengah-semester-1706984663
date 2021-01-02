@@ -2,7 +2,9 @@ package id.ac.ui.cs.mobileprogramming.mohammad_adli.activityplanner.data.dao;
 
 import androidx.lifecycle.LiveData;
 import androidx.room.Dao;
+import androidx.room.Delete;
 import androidx.room.Insert;
+import androidx.room.Update;
 import androidx.room.Query;
 
 import java.util.List;
@@ -17,4 +19,10 @@ public interface PlanDao {
 
     @Insert
     void insert(Plan plan);
+
+    @Update
+    void update(Plan plan);
+
+    @Delete
+    void delete(Plan plan);
 }
