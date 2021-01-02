@@ -1,26 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@drawable/layout_border"
-    android:orientation="vertical">
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
 
-    <TextView
-        android:id="@+id/plan_title"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/plans"
+        android:name="id.ac.ui.cs.mobileprogramming.mohammad_adli.activityplanner.ui.plan.PlanFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        app:layoutManager="LinearLayoutManager"
+        tools:listitem="@layout/fragment_plan_item">
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/text_margin"
-        android:layout_marginLeft="@dimen/text_margin"
-        android:layout_marginTop="@dimen/text_margin"
-        android:textStyle="bold"
-        android:textAppearance="?attr/textAppearanceListItem" />
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/fab_margin"
+        app:srcCompat="@drawable/ic_fab_add_plan" />
 
-    <TextView
-        android:id="@+id/plan_activity_number"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/text_margin"
-        android:layout_marginLeft="@dimen/text_margin"
-        android:layout_marginBottom="@dimen/text_margin"
-        android:textAppearance="?attr/textAppearanceListItem" />
-</LinearLayout>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
